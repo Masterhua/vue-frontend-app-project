@@ -1,26 +1,27 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "esnext", 
     "module": "esnext",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "allowJs": true,
     "jsx": "preserve", 
-    "strict": true,
-    "baseUrl": "src", // 使得基路径为 src
+    "strict": true, 
+    "baseUrl": "src", 
     "paths": {
-      "@components/*": ["components/*"], // 使得路径别名 @components 适用于 src/components 目录
-      "@/*": ["*"] // 允许使用 @/ 来访问 src 目录下的文件
+      "@components/*": ["components/*"], 
+      "@/*": ["*"]
     },
     "types": [
-      "node",
+      "node", 
       "vue"
     ]
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue" 
-  ],
+    "src/**/*.ts", 
+    "src/**/*.d.ts", 
+    "src/**/*.tsx", 
+    "src/**/*.vue",
+    "vite-env.d.ts"
+  ]
 }
