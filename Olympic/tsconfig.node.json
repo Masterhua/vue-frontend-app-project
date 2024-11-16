@@ -1,0 +1,18 @@
+{
+  "extends": "@tsconfig/node22/tsconfig.json", 
+  "include": [
+    "vite.config.*",
+    "vitest.config.*",
+    "cypress.config.*",
+    "nightwatch.conf.*",
+    "playwright.config.*"
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": true, // 不进行输出
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    "module": "ESNext",
+    "moduleResolution": "Bundler", // 使用 Bundler 模块解析方式
+    "types": ["node"]
+  }
+}
