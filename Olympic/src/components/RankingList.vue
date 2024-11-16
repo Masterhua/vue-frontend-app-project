@@ -29,11 +29,21 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
+// 定义 Country 类型
+interface Country {
+  noc: string; // 国家代码
+  rank: number; // 排名
+  gold: number; // 金牌数
+  silver: number; // 银牌数
+  bronze: number; // 铜牌数
+  flagUrl: string; // 国旗图片 URL
+}
+
 export default defineComponent({
   name: 'RankingList',
   props: {
     countries: {
-      type: Array,
+      type: Array as () => Country[], // 将类型定义为包含 Country 对象的数组
       required: true,
     },
   },
@@ -45,6 +55,7 @@ export default defineComponent({
   },
 });
 </script>
+
 <style scoped>
 .ranking-list {
   text-align: left;

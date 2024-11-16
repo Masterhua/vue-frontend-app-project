@@ -26,6 +26,15 @@ export const disciplines = [
         // 更多体育项目...
       ],
     },
+    {
+      noc: 'JPN',
+      disciplines: [
+        { name: 'Cycling', gold: 6, silver: 2, bronze: 3 },
+        { name: 'Rowing', gold: 4, silver: 1, bronze: 2 },
+        { name: 'Gymnastics', gold: 2, silver: 2, bronze: 3 },
+        // 更多体育项目...
+      ],
+    },
     // 其他国家...
   ];
   

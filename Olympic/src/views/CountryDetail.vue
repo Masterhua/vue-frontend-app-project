@@ -33,17 +33,17 @@
 
     <!-- 体育项目列表 -->
     <div class="sport-list">
-      <SportList :disciplines="countryDisciplines" @sport-click="handleSportClick" />
+      <SportList :disciplines="countryDisciplines" :noc="noc" @sport-click="handleSportClick" />
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { useRouter } from 'vue-router';  // 导入 vue-router 用于跳转
-import { countries } from '@/db';
-import { disciplines } from '@/sportdb';
-import SportList from '@components/SportList.vue';
+import { useRouter } from 'vue-router'; // 导入 vue-router 用于跳转
+import { countries } from '@/db'; // 引入包含国家数据的文件
+import { disciplines } from '@/sportdb'; // 引入包含体育项目数据的文件
+import SportList from '@components/SportList.vue'; // 引入 SportList 组件
 
 interface Country {
   noc: string;
@@ -57,7 +57,6 @@ interface Country {
   rankTotal: number;
   sortTotalRank: number;
   flagUrl: string;
-  disciplines: { name: string; gold: number; silver: number; bronze: number }[];
 }
 
 export default defineComponent({
@@ -72,12 +71,15 @@ export default defineComponent({
     },
   },
   computed: {
+    // 获取国家信息
     country(): Country | undefined {
       return countries.find((country) => country.noc === this.noc);
     },
+    // 获取该国家的体育项目
     countryDisciplines() {
+      // 从 sportdb 中获取该国家的体育项目
       const countryDisciplines = disciplines.find((item) => item.noc === this.noc);
-      return countryDisciplines ? countryDisciplines.disciplines : null;
+      return countryDisciplines ? countryDisciplines.disciplines : [];
     },
   },
   methods: {
@@ -87,7 +89,7 @@ export default defineComponent({
         name: 'SportDetail',
         params: {
           noc: noc,
-          sportName: sportName,  // 将运动名称传递到 SportDetail 页面
+          sportName: sportName, // 将运动名称传递到 SportDetail 页面
         },
       });
     },

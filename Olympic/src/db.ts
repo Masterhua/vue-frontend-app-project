@@ -11,7 +11,6 @@ export interface CountryInfo {
     silver: number;
     bronze: number;
     total: number;
-    disciplines: null | string[];
     enDescription: string;
     enLongDescription: string;
     flagUrl: string;
@@ -32,7 +31,6 @@ export interface CountryInfo {
             "silver": 44,
             "bronze": 42,
             "total": 126,
-            "disciplines": null,
             "enDescription": "United States",
             "enLongDescription": "United States of America",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/USA.png"
@@ -50,7 +48,6 @@ export interface CountryInfo {
             "silver": 27,
             "bronze": 24,
             "total": 91,
-            "disciplines": null,
             "enDescription": "China",
             "enLongDescription": "People's Republic of China",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CHN.png"
@@ -68,7 +65,7 @@ export interface CountryInfo {
             "silver": 12,
             "bronze": 13,
             "total": 45,
-            "disciplines": null,
+            
             "enDescription": "Japan",
             "enLongDescription": "Japan",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/JPN.png"
@@ -86,7 +83,7 @@ export interface CountryInfo {
             "silver": 19,
             "bronze": 16,
             "total": 53,
-            "disciplines": null,
+            
             "enDescription": "Australia",
             "enLongDescription": "Australia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/AUS.png"
@@ -104,7 +101,7 @@ export interface CountryInfo {
             "silver": 26,
             "bronze": 22,
             "total": 64,
-            "disciplines": null,
+            
             "enDescription": "France",
             "enLongDescription": "France",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/FRA.png"
@@ -122,7 +119,7 @@ export interface CountryInfo {
             "silver": 7,
             "bronze": 12,
             "total": 34,
-            "disciplines": null,
+            
             "enDescription": "Netherlands",
             "enLongDescription": "Netherlands",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/NED.png"
@@ -140,7 +137,7 @@ export interface CountryInfo {
             "silver": 22,
             "bronze": 29,
             "total": 65,
-            "disciplines": null,
+            
             "enDescription": "Great Britain",
             "enLongDescription": "Great Britain",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/GBR.png"
@@ -158,7 +155,7 @@ export interface CountryInfo {
             "silver": 9,
             "bronze": 10,
             "total": 32,
-            "disciplines": null,
+            
             "enDescription": "Korea",
             "enLongDescription": "Republic of Korea",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/KOR.png"
@@ -176,7 +173,7 @@ export interface CountryInfo {
             "silver": 13,
             "bronze": 15,
             "total": 40,
-            "disciplines": null,
+            
             "enDescription": "Italy",
             "enLongDescription": "Italy",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ITA.png"
@@ -194,7 +191,7 @@ export interface CountryInfo {
             "silver": 13,
             "bronze": 8,
             "total": 33,
-            "disciplines": null,
+            
             "enDescription": "Germany",
             "enLongDescription": "Germany",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/GER.png"
@@ -212,7 +209,7 @@ export interface CountryInfo {
             "silver": 7,
             "bronze": 3,
             "total": 20,
-            "disciplines": null,
+            
             "enDescription": "New Zealand",
             "enLongDescription": "New Zealand",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/NZL.png"
@@ -230,7 +227,7 @@ export interface CountryInfo {
             "silver": 7,
             "bronze": 11,
             "total": 27,
-            "disciplines": null,
+            
             "enDescription": "Canada",
             "enLongDescription": "Canada",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CAN.png"
@@ -248,7 +245,7 @@ export interface CountryInfo {
             "silver": 2,
             "bronze": 3,
             "total": 13,
-            "disciplines": null,
+            
             "enDescription": "Uzbekistan",
             "enLongDescription": "Uzbekistan",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/UZB.png"
@@ -266,7 +263,7 @@ export interface CountryInfo {
             "silver": 7,
             "bronze": 6,
             "total": 19,
-            "disciplines": null,
+            
             "enDescription": "Hungary",
             "enLongDescription": "Hungary",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/HUN.png"
@@ -284,7 +281,7 @@ export interface CountryInfo {
             "silver": 4,
             "bronze": 9,
             "total": 18,
-            "disciplines": null,
+            
             "enDescription": "Spain",
             "enLongDescription": "Spain",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ESP.png"
@@ -302,7 +299,7 @@ export interface CountryInfo {
             "silver": 4,
             "bronze": 3,
             "total": 11,
-            "disciplines": null,
+            
             "enDescription": "Sweden",
             "enLongDescription": "Sweden",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/SWE.png"
@@ -320,7 +317,7 @@ export interface CountryInfo {
             "silver": 2,
             "bronze": 5,
             "total": 11,
-            "disciplines": null,
+            
             "enDescription": "Kenya",
             "enLongDescription": "Kenya",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/KEN.png"
@@ -338,7 +335,7 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 3,
             "total": 8,
-            "disciplines": null,
+            
             "enDescription": "Norway",
             "enLongDescription": "Norway",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/NOR.png"
@@ -356,7 +353,7 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 3,
             "total": 7,
-            "disciplines": null,
+            
             "enDescription": "Ireland",
             "enLongDescription": "Ireland",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/IRL.png"
@@ -374,7 +371,7 @@ export interface CountryInfo {
             "silver": 7,
             "bronze": 10,
             "total": 20,
-            "disciplines": null,
+            
             "enDescription": "Brazil",
             "enLongDescription": "Brazil",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/BRA.png"
@@ -392,7 +389,7 @@ export interface CountryInfo {
             "silver": 6,
             "bronze": 3,
             "total": 12,
-            "disciplines": null,
+            
             "enDescription": "IR Iran",
             "enLongDescription": "Islamic Republic of Iran",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/IRI.png"
@@ -410,7 +407,7 @@ export interface CountryInfo {
             "silver": 5,
             "bronze": 4,
             "total": 12,
-            "disciplines": null,
+            
             "enDescription": "Ukraine",
             "enLongDescription": "Ukraine",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/UKR.png"
@@ -428,7 +425,7 @@ export interface CountryInfo {
             "silver": 4,
             "bronze": 2,
             "total": 9,
-            "disciplines": null,
+            
             "enDescription": "Romania",
             "enLongDescription": "Romania",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ROU.png"
@@ -446,7 +443,7 @@ export interface CountryInfo {
             "silver": 3,
             "bronze": 1,
             "total": 7,
-            "disciplines": null,
+            
             "enDescription": "Georgia",
             "enLongDescription": "Georgia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/GEO.png"
@@ -464,7 +461,7 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 6,
             "total": 10,
-            "disciplines": null,
+            
             "enDescription": "Belgium",
             "enLongDescription": "Belgium",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/BEL.png"
@@ -482,7 +479,7 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 3,
             "total": 7,
-            "disciplines": null,
+            
             "enDescription": "Bulgaria",
             "enLongDescription": "Bulgaria",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/BUL.png"
@@ -500,7 +497,7 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 1,
             "total": 5,
-            "disciplines": null,
+            
             "enDescription": "Serbia",
             "enLongDescription": "Serbia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/SRB.png"
@@ -518,7 +515,7 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 2,
             "total": 5,
-            "disciplines": null,
+            
             "enDescription": "Czechia",
             "enLongDescription": "Czechia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CZE.png"
@@ -536,7 +533,7 @@ export interface CountryInfo {
             "silver": 2,
             "bronze": 5,
             "total": 9,
-            "disciplines": null,
+            
             "enDescription": "Denmark",
             "enLongDescription": "Denmark",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/DEN.png"
@@ -554,7 +551,7 @@ export interface CountryInfo {
             "silver": 2,
             "bronze": 3,
             "total": 7,
-            "disciplines": null,
+            
             "enDescription": "Azerbaijan",
             "enLongDescription": "Azerbaijan",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/AZE.png"
@@ -572,7 +569,7 @@ export interface CountryInfo {
             "silver": 2,
             "bronze": 3,
             "total": 7,
-            "disciplines": null,
+            
             "enDescription": "Croatia",
             "enLongDescription": "Croatia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CRO.png"
@@ -590,7 +587,7 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 6,
             "total": 9,
-            "disciplines": null,
+            
             "enDescription": "Cuba",
             "enLongDescription": "Cuba",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CUB.png"
@@ -608,7 +605,7 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 1,
             "total": 4,
-            "disciplines": null,
+            
             "enDescription": "Bahrain",
             "enLongDescription": "Bahrain",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/BRN.png"
@@ -626,7 +623,7 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 0,
             "total": 3,
-            "disciplines": null,
+            
             "enDescription": "Slovenia",
             "enLongDescription": "Slovenia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/SLO.png"
@@ -644,7 +641,7 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 5,
             "total": 7,
-            "disciplines": null,
+            
             "enDescription": "Chinese Taipei",
             "enLongDescription": "Chinese Taipei",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/TPE.png"
@@ -662,7 +659,7 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 3,
             "total": 5,
-            "disciplines": null,
+            
             "enDescription": "Austria",
             "enLongDescription": "Austria",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/AUT.png"
@@ -680,7 +677,7 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 2,
             "total": 4,
-            "disciplines": null,
+            
             "enDescription": "Hong Kong, China",
             "enLongDescription": "Hong Kong, China",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/HKG.png"
@@ -698,7 +695,7 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 2,
             "total": 4,
-            "disciplines": null,
+            
             "enDescription": "Philippines",
             "enLongDescription": "Philippines",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/PHI.png"
@@ -716,7 +713,7 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 1,
             "total": 3,
-            "disciplines": null,
+            
             "enDescription": "Algeria",
             "enLongDescription": "Algeria",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ALG.png"
@@ -734,7 +731,7 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 1,
             "total": 3,
-            "disciplines": null,
+            
             "enDescription": "Indonesia",
             "enLongDescription": "Indonesia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/INA.png"
@@ -752,7 +749,7 @@ export interface CountryInfo {
             "silver": 5,
             "bronze": 1,
             "total": 7,
-            "disciplines": null,
+            
             "enDescription": "Israel",
             "enLongDescription": "Israel",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ISR.png"
@@ -770,7 +767,7 @@ export interface CountryInfo {
             "silver": 4,
             "bronze": 5,
             "total": 10,
-            "disciplines": null,
+            
             "enDescription": "Poland",
             "enLongDescription": "Poland",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/POL.png"
@@ -788,7 +785,7 @@ export interface CountryInfo {
             "silver": 3,
             "bronze": 3,
             "total": 7,
-            "disciplines": null,
+            
             "enDescription": "Kazakhstan",
             "enLongDescription": "Kazakhstan",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/KAZ.png"
@@ -806,7 +803,7 @@ export interface CountryInfo {
             "silver": 3,
             "bronze": 2,
             "total": 6,
-            "disciplines": null,
+            
             "enDescription": "Jamaica",
             "enLongDescription": "Jamaica",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/JAM.png"
@@ -824,7 +821,7 @@ export interface CountryInfo {
             "silver": 3,
             "bronze": 2,
             "total": 6,
-            "disciplines": null,
+            
             "enDescription": "South Africa",
             "enLongDescription": "South Africa",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/RSA.png"
@@ -842,7 +839,7 @@ export interface CountryInfo {
             "silver": 3,
             "bronze": 2,
             "total": 6,
-            "disciplines": null,
+            
             "enDescription": "Thailand",
             "enLongDescription": "Thailand",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/THA.png"
@@ -860,7 +857,7 @@ export interface CountryInfo {
             "silver": 3,
             "bronze": 0,
             "total": 4,
-            "disciplines": null,
+            
             "enDescription": "Ethiopia",
             "enLongDescription": "Ethiopia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ETH.png"
@@ -878,7 +875,7 @@ export interface CountryInfo {
             "silver": 2,
             "bronze": 5,
             "total": 8,
-            "disciplines": null,
+            
             "enDescription": "Switzerland",
             "enLongDescription": "Switzerland",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/SUI.png"
@@ -896,7 +893,7 @@ export interface CountryInfo {
             "silver": 2,
             "bronze": 2,
             "total": 5,
-            "disciplines": null,
+            
             "enDescription": "Ecuador",
             "enLongDescription": "Ecuador",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ECU.png"
@@ -914,7 +911,7 @@ export interface CountryInfo {
             "silver": 2,
             "bronze": 1,
             "total": 4,
-            "disciplines": null,
+            
             "enDescription": "Portugal",
             "enLongDescription": "Portugal",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/POR.png"
@@ -932,7 +929,7 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 6,
             "total": 8,
-            "disciplines": null,
+            
             "enDescription": "Greece",
             "enLongDescription": "Greece",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/GRE.png"
@@ -950,7 +947,7 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 1,
             "total": 3,
-            "disciplines": null,
+            
             "enDescription": "Argentina",
             "enLongDescription": "Argentina",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ARG.png"
@@ -968,7 +965,7 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 1,
             "total": 3,
-            "disciplines": null,
+            
             "enDescription": "Egypt",
             "enLongDescription": "Egypt",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/EGY.png"
@@ -986,7 +983,7 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 1,
             "total": 3,
-            "disciplines": null,
+            
             "enDescription": "Tunisia",
             "enLongDescription": "Tunisia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/TUN.png"
@@ -1004,7 +1001,7 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 0,
             "total": 2,
-            "disciplines": null,
+            
             "enDescription": "Botswana",
             "enLongDescription": "Botswana",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/BOT.png"
@@ -1022,7 +1019,7 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 0,
             "total": 2,
-            "disciplines": null,
+            
             "enDescription": "Chile",
             "enLongDescription": "Chile",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CHI.png"
@@ -1040,7 +1037,7 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 0,
             "total": 2,
-            "disciplines": null,
+            
             "enDescription": "Saint Lucia",
             "enLongDescription": "Saint Lucia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/LCA.png"
@@ -1058,7 +1055,7 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 0,
             "total": 2,
-            "disciplines": null,
+            
             "enDescription": "Uganda",
             "enLongDescription": "Uganda",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/UGA.png"
@@ -1076,7 +1073,7 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 2,
             "total": 3,
-            "disciplines": null,
+            
             "enDescription": "Dominican Republic",
             "enLongDescription": "Dominican Republic",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/DOM.png"
@@ -1094,7 +1091,7 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 1,
             "total": 2,
-            "disciplines": null,
+            
             "enDescription": "Guatemala",
             "enLongDescription": "Guatemala",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/GUA.png"
@@ -1112,7 +1109,7 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 1,
             "total": 2,
-            "disciplines": null,
+            
             "enDescription": "Morocco",
             "enLongDescription": "Morocco",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/MAR.png"
@@ -1130,7 +1127,7 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 0,
             "total": 1,
-            "disciplines": null,
+            
             "enDescription": "Dominica",
             "enLongDescription": "Dominica",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/DMA.png"
@@ -1148,7 +1145,7 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 0,
             "total": 1,
-            "disciplines": null,
+            
             "enDescription": "Pakistan",
             "enLongDescription": "Pakistan",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/PAK.png"
@@ -1166,7 +1163,7 @@ export interface CountryInfo {
             "silver": 3,
             "bronze": 5,
             "total": 8,
-            "disciplines": null,
+            
             "enDescription": "T�rkiye",
             "enLongDescription": "T�rkiye",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/TUR.png"
@@ -1184,7 +1181,7 @@ export interface CountryInfo {
             "silver": 3,
             "bronze": 2,
             "total": 5,
-            "disciplines": null,
+            
             "enDescription": "Mexico",
             "enLongDescription": "Mexico",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/MEX.png"
@@ -1202,7 +1199,7 @@ export interface CountryInfo {
             "silver": 3,
             "bronze": 1,
             "total": 4,
-            "disciplines": null,
+            
             "enDescription": "Armenia",
             "enLongDescription": "Armenia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ARM.png"
@@ -1220,7 +1217,7 @@ export interface CountryInfo {
             "silver": 3,
             "bronze": 1,
             "total": 4,
-            "disciplines": null,
+            
             "enDescription": "Colombia",
             "enLongDescription": "Colombia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/COL.png"
@@ -1238,7 +1235,7 @@ export interface CountryInfo {
             "silver": 2,
             "bronze": 4,
             "total": 6,
-            "disciplines": null,
+            
             "enDescription": "Kyrgyzstan",
             "enLongDescription": "Kyrgyzstan",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/KGZ.png"
@@ -1256,7 +1253,7 @@ export interface CountryInfo {
             "silver": 2,
             "bronze": 4,
             "total": 6,
-            "disciplines": null,
+            
             "enDescription": "DPR Korea",
             "enLongDescription": "Democratic People's Republic of Korea",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/PRK.png"
@@ -1274,7 +1271,7 @@ export interface CountryInfo {
             "silver": 2,
             "bronze": 2,
             "total": 4,
-            "disciplines": null,
+            
             "enDescription": "Lithuania",
             "enLongDescription": "Lithuania",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/LTU.png"
@@ -1292,7 +1289,7 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 5,
             "total": 6,
-            "disciplines": null,
+            
             "enDescription": "India",
             "enLongDescription": "India",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/IND.png"
@@ -1310,7 +1307,7 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 3,
             "total": 4,
-            "disciplines": null,
+            
             "enDescription": "Republic of Moldova",
             "enLongDescription": "Republic of Moldova",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/MDA.png"
@@ -1328,7 +1325,7 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 1,
             "total": 2,
-            "disciplines": null,
+            
             "enDescription": "Kosovo",
             "enLongDescription": "Kosovo",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/KOS.png"
@@ -1346,7 +1343,7 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 0,
             "total": 1,
-            "disciplines": null,
+            
             "enDescription": "Cyprus",
             "enLongDescription": "Cyprus",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CYP.png"
@@ -1364,7 +1361,7 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 0,
             "total": 1,
-            "disciplines": null,
+            
             "enDescription": "Fiji",
             "enLongDescription": "Fiji",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/FIJ.png"
@@ -1382,7 +1379,7 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 0,
             "total": 1,
-            "disciplines": null,
+            
             "enDescription": "Jordan",
             "enLongDescription": "Jordan",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/JOR.png"
@@ -1400,7 +1397,7 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 0,
             "total": 1,
-            "disciplines": null,
+            
             "enDescription": "Mongolia",
             "enLongDescription": "Mongolia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/MGL.png"
@@ -1418,7 +1415,7 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 0,
             "total": 1,
-            "disciplines": null,
+            
             "enDescription": "Panama",
             "enLongDescription": "Panama",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/PAN.png"
@@ -1436,7 +1433,7 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 3,
             "total": 3,
-            "disciplines": null,
+            
             "enDescription": "Tajikistan",
             "enLongDescription": "Tajikistan",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/TJK.png"
@@ -1454,7 +1451,7 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 2,
             "total": 2,
-            "disciplines": null,
+            
             "enDescription": "Albania",
             "enLongDescription": "Albania",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ALB.png"
@@ -1472,7 +1469,7 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 2,
             "total": 2,
-            "disciplines": null,
+            
             "enDescription": "Grenada",
             "enLongDescription": "Grenada",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/GRN.png"
@@ -1490,7 +1487,7 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 2,
             "total": 2,
-            "disciplines": null,
+            
             "enDescription": "Malaysia",
             "enLongDescription": "Malaysia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/MAS.png"
@@ -1508,7 +1505,7 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 2,
             "total": 2,
-            "disciplines": null,
+            
             "enDescription": "Puerto Rico",
             "enLongDescription": "Puerto Rico",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/PUR.png"
@@ -1526,7 +1523,7 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 1,
             "total": 1,
-            "disciplines": null,
+            
             "enDescription": "C�te d'Ivoire",
             "enLongDescription": "C�te d'Ivoire",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CIV.png"
@@ -1544,7 +1541,7 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 1,
             "total": 1,
-            "disciplines": null,
+            
             "enDescription": "Cabo Verde",
             "enLongDescription": "Cabo Verde",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CPV.png"
@@ -1562,7 +1559,7 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 1,
             "total": 1,
-            "disciplines": null,
+            
             "enDescription": "EOR",
             "enLongDescription": "Refugee Olympic Team",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/EOR.png"
@@ -1580,7 +1577,7 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 1,
             "total": 1,
-            "disciplines": null,
+            
             "enDescription": "Peru",
             "enLongDescription": "Peru",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/PER.png"
@@ -1598,7 +1595,7 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 1,
             "total": 1,
-            "disciplines": null,
+            
             "enDescription": "Qatar",
             "enLongDescription": "Qatar",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/QAT.png"
@@ -1616,7 +1613,7 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 1,
             "total": 1,
-            "disciplines": null,
+            
             "enDescription": "Singapore",
             "enLongDescription": "Singapore",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/SGP.png"
@@ -1634,7 +1631,7 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 1,
             "total": 1,
-            "disciplines": null,
+            
             "enDescription": "Slovakia",
             "enLongDescription": "Slovakia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/SVK.png"
@@ -1652,7 +1649,7 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 1,
             "total": 1,
-            "disciplines": null,
+            
             "enDescription": "Zambia",
             "enLongDescription": "Zambia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ZAM.png"
