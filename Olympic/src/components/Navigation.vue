@@ -12,24 +12,20 @@
           @keyup="filterSuggestions"
           @focus="showSuggestions"
           @blur="hideSuggestions"
-          class="px-3 py-2 border border-gray-300 rounded w-48 focus:outline-none focus:ring focus:ring-blue-300"
-        />
+          class="px-3 py-2 border border-gray-300 rounded w-48 focus:outline-none focus:ring focus:ring-blue-300 text-black"/>
         <button
           @click="searchCountry(searchQuery)"
-          class="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-black rounded"
-        >
+          class="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-black rounded">
           Search
         </button>
         <ul
           v-if="showList && filteredSuggestions.length"
-          class="absolute top-12 left-0 w-full bg-white border border-gray-300 rounded shadow max-h-40 overflow-y-auto z-50"
-        >
+          class="absolute top-12 left-0 w-full bg-white border  border-gray-300 rounded shadow max-h-40 overflow-y-auto z-50">
           <li
             v-for="suggestion in filteredSuggestions"
             :key="suggestion.noc"
             @click="selectSuggestion(suggestion)"
-            class="px-3 py-2 cursor-pointer hover:bg-blue-500 hover:text-white"
-          >
+            class="px-3 py-2 cursor-pointer hover:bg-blue-500 hover:text-white text-black">
             {{ suggestion.enDescription }}
           </li>
         </ul>
@@ -41,7 +37,7 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import { useRouter } from 'vue-router';
-import { countries, CountryInfo } from '@/countryinfo';
+import { countries, CountryInfo } from '@/countryinfo.json';
 
 export default defineComponent({
   props: {
@@ -87,7 +83,7 @@ export default defineComponent({
         showList.value = false;
       }, 200);
     };
-    
+
     const menuItems = [
       { name: 'Home', link: '/' },
       { name: 'Aboutus', link: '/about' },
@@ -108,3 +104,22 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+nav a {
+  color: white;
+}
+
+input, button {
+  color: black;
+}
+
+ul li {
+  color: black;
+}
+
+ul li:hover {
+  background-color: #3b82f6;
+  color: white;
+}
+</style>

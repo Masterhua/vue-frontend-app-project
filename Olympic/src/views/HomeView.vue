@@ -2,31 +2,50 @@
   <Navigation :menuItems="menuItems" />
 
   <div class="home-view flex justify-center items-start p-4">
-    <div class="ranking-container w-2/5">
+    <div class="ranking-container w-full sm:w-3/5 md:w-2/5">
       <h1 class="text-4xl font-bold">Welcome to Olympic report application</h1>
       <RankingList :countries="paginatedCountries" @country-click="goToCountryDetail" />
     </div>
   </div>
 
   <div class="pagination flex justify-center gap-4 items-center mt-6">
-    <button @click="previousPage" :disabled="currentPage === 1" class="pagination-btn" :class="{ 'cursor-not-allowed bg-gray-400': currentPage === 1 }">Previous</button>
+    <button
+      @click="previousPage"
+      :disabled="currentPage === 1"
+      class="pagination-btn"
+      :class="{ 'cursor-not-allowed bg-gray-400': currentPage === 1 }"
+    >
+      Previous
+    </button>
     <span>Page {{ currentPage }} of {{ totalPages }}</span>
-    <button @click="nextPage" :disabled="currentPage === totalPages" class="pagination-btn" :class="{ 'cursor-not-allowed bg-gray-400': currentPage === totalPages }">Next</button>
+    <button
+      @click="nextPage"
+      :disabled="currentPage === totalPages"
+      class="pagination-btn"
+      :class="{ 'cursor-not-allowed bg-gray-400': currentPage === totalPages }"
+    >
+      Next
+    </button>
   </div>
 
   <div class="mt-6 text-center">
     <p>Enter a number to change the number of Country per page (1-10):</p>
-    <div class="flex justify-center mt-4">
+    <div class="flex justify-center mt-4 gap-2">
       <input
         v-model="inputItemsPerPage"
         type="number"
         min="1"
         max="10"
-        class="p-2 border rounded"
+        class="p-2 border rounded w-24 sm:w-32"
         placeholder="Items per page"
         @input="validateInput"
       />
-      <button @click="updateItemsPerPage" class="ml-2 p-2 bg-blue-500 text-white rounded">Update</button>
+      <button
+        @click="updateItemsPerPage"
+        class="ml-2 p-2 bg-blue-500 text-white rounded"
+      >
+        Update
+      </button>
     </div>
     <p v-if="inputError" class="text-red-500 mt-2">Please enter a number between 1 and 10.</p>
   </div>
@@ -34,10 +53,24 @@
 
 <script lang="ts">
 import { defineComponent, ref, computed } from 'vue';
-import { countries } from '@/countryinfo';
 import { useRouter } from 'vue-router';
 import RankingList from '@/components/RankingList.vue';
 import Navigation from '@/components/Navigation.vue';
+import countryData from '@/countryinfo.json';
+
+interface Country {
+  noc: string;
+  enLongDescription: string;
+  rank: number;
+  gold: number;
+  silver: number;
+  bronze: number;
+  total: number;
+  sortRank: number;
+  rankTotal: number;
+  sortTotalRank: number;
+  flagUrl: string;
+}
 
 export default defineComponent({
   name: 'HomeView',
@@ -51,6 +84,8 @@ export default defineComponent({
     const currentPage = ref(1);
     const inputItemsPerPage = ref(itemsPerPage.value);
     const inputError = ref(false);
+
+    const countries = countryData.countries;
 
     const paginatedCountries = computed(() => {
       const startIndex = (currentPage.value - 1) * itemsPerPage.value;
@@ -96,8 +131,8 @@ export default defineComponent({
       const newItemsPerPage = parseInt(inputItemsPerPage.value.toString(), 10);
       if (newItemsPerPage >= 1 && newItemsPerPage <= 10) {
         itemsPerPage.value = newItemsPerPage;
-        currentPage.value = 1;  // 返回第一页
-        inputError.value = false; // 重置错误提示
+        currentPage.value = 1;
+        inputError.value = false;
       } else {
         inputError.value = true;
       }
@@ -126,7 +161,7 @@ export default defineComponent({
 }
 
 .ranking-container {
-  @apply w-2/5;
+  @apply w-full sm:w-3/5 md:w-2/5;
 }
 
 .pagination {
@@ -139,5 +174,15 @@ export default defineComponent({
 
 button:disabled {
   @apply bg-gray-400 cursor-not-allowed;
+}
+
+@media (max-width: 640px) {
+  .pagination-btn {
+    padding: 10px 16px;
+  }
+
+  .ranking-container {
+    width: 100%;
+  }
 }
 </style>

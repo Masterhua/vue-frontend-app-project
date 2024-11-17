@@ -1,18 +1,36 @@
 <template>
   <div>
-    <div class="country-info bg-white shadow-lg p-4 rounded-lg mb-5 max-w-2xl absolute left-1/5">
-      <img v-if="country?.flagUrl" :src="country?.flagUrl" alt="Country Flag" class="w-12 h-8 object-cover" />
-      <h1 class="text-xl font-bold">{{ country?.enLongDescription }} ({{ country?.noc }})</h1>
+    <div class="country-info bg-blue-500 shadow-lg p-4 rounded-lg mb-5 max-w-2xl mx-auto sm:relative sm:left-0">
+      <div class="flag-container">
+        <img v-if="country?.flagUrl" :src="country?.flagUrl" alt="Country Flag" class="w-12 h-8 object-cover" />
+      <h1 class="text-xl font-bold text-center">{{ country?.enLongDescription }} ({{ country?.noc }})</h1>
+      
     </div>
+      <p class="text-center">Rank: {{ country.rank }}</p>
+  </div>
 
-    <div v-if="country" class="competition-info bg-white shadow-lg p-4 rounded-lg mb-5 max-w-2xl absolute left-1/5 top-1/3">
+    <div v-if="country" class="competition-info bg-white shadow-lg p-4 rounded-lg mb-5 max-w-2xl mx-auto sm:relative sm:left-0 sm:top-1/3">
       <div class="medal-info mb-5">
         <h2 class="text-lg font-bold">Medal Summary</h2>
-        <p>Rank: {{ country.rank }}</p>
         <ul class="list-none p-0">
-          <li>Gold: {{ country.gold }}</li>
-          <li>Silver: {{ country.silver }}</li>
-          <li>Bronze: {{ country.bronze }}</li>
+          <li class="mb-2">
+            <div class="medal-container">
+              <img src="../picture/gold.gif" alt="Gold Medal" class="medal-icon" />
+              <span class="medal-text">Gold: {{ country.gold }}</span>
+            </div>
+          </li>
+          <li class="mb-2">
+            <div class="medal-container">
+              <img src="../picture/silver.gif" alt="Silver Medal" class="medal-icon" />
+              <span class="medal-text">Silver: {{ country.silver }}</span>
+            </div>
+          </li>
+          <li class="mb-2">
+            <div class="medal-container">
+              <img src="../picture/bronze.gif" alt="Bronze Medal" class="medal-icon" />
+              <span class="medal-text">Bronze: {{ country.bronze }}</span>
+            </div>
+          </li>
           <li>Total: {{ country.total }}</li>
         </ul>
       </div>
@@ -24,11 +42,7 @@
       </div>
     </div>
 
-    <div v-else>
-      <p>Country not found or loading...</p>
-    </div>
-
-    <div class="sport-list bg-white shadow-lg p-4 rounded-lg mb-5 max-w-2xl absolute right-1/5 top-1/3">
+    <div class="sport-list bg-white shadow-lg p-4 rounded-lg mb-5 max-w-2xl mx-auto sm:relative sm:right-0 sm:top-1/3 sm:w-2/5">
       <SportList :disciplines="countryDisciplines" :noc="noc" @sport-click="handleSportClick" />
     </div>
   </div>
@@ -67,11 +81,9 @@ export default defineComponent({
     },
   },
   computed: {
-    // Find country by NOC
     country(): Country | undefined {
       return countries.find((country) => country.noc === this.noc);
     },
-    // Get disciplines for the specific country
     countryDisciplines() {
       const countryData = sportdb.find((item) => item.noc === this.noc);
       return countryData ? countryData.disciplines : [];
@@ -93,24 +105,24 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.country-info {
-  position: absolute;
-  top: 10%;
-  left: 20%;
-  width: 30%;
+.flag-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
-.competition-info {
-  position: absolute;
-  top: 30%;
-  left: 20%;
-  width: 30%;
+.medal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.sport-list {
-  position: absolute;
-  top: 30%;
-  right: 20%;
-  width: 25%;
+.medal-icon {
+  margin-right: 8px;
+}
+
+.medal-text {
+  text-align: center;
 }
 </style>

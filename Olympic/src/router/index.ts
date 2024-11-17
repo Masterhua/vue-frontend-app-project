@@ -26,6 +26,7 @@ const routes = [
     name: 'country-detail',
     component: CountryDetail,
     props: true,
+  
   },
   {
     path: '/sport/:noc/:sportName',

@@ -1,25 +1,7 @@
-export interface CountryInfo {
-    noc: string;
-    description: string;
-    longDescription: string;
-    rank: number;
-    sortRank: number;
-    rankTotal: number;
-    sortTotalRank: number;
-    nocSlug: string;
-    gold: number;
-    silver: number;
-    bronze: number;
-    total: number;
-    enDescription: string;
-    enLongDescription: string;
-    flagUrl: string;
-  }
-  export const countries: CountryInfo[] = [
+    {
+      "countries":[
         {
             "noc": "USA",
-            "description": "美国",
-            "longDescription": "美利坚合众国",
             "rank": 1,
             "sortRank": 1,
             "rankTotal": 1,
@@ -35,8 +17,6 @@ export interface CountryInfo {
           },
           {
             "noc": "CHN",
-            "description": "中国",
-            "longDescription": "中国",
             "rank": 2,
             "sortRank": 2,
             "rankTotal": 2,
@@ -52,8 +32,6 @@ export interface CountryInfo {
           },
           {
             "noc": "JPN",
-            "description": "日本",
-            "longDescription": "日本",
             "rank": 3,
             "sortRank": 3,
             "rankTotal": 6,
@@ -63,15 +41,12 @@ export interface CountryInfo {
             "silver": 12,
             "bronze": 13,
             "total": 45,
-            
             "enDescription": "Japan",
             "enLongDescription": "Japan",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/JPN.png"
           },
           {
             "noc": "AUS",
-            "description": "澳大利亚",
-            "longDescription": "澳大利亚",
             "rank": 4,
             "sortRank": 4,
             "rankTotal": 5,
@@ -81,15 +56,12 @@ export interface CountryInfo {
             "silver": 19,
             "bronze": 16,
             "total": 53,
-            
             "enDescription": "Australia",
             "enLongDescription": "Australia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/AUS.png"
           },
           {
             "noc": "FRA",
-            "description": "法国",
-            "longDescription": "法国",
             "rank": 5,
             "sortRank": 5,
             "rankTotal": 4,
@@ -99,15 +71,12 @@ export interface CountryInfo {
             "silver": 26,
             "bronze": 22,
             "total": 64,
-            
             "enDescription": "France",
             "enLongDescription": "France",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/FRA.png"
           },
           {
             "noc": "NED",
-            "description": "荷兰",
-            "longDescription": "荷兰",
             "rank": 6,
             "sortRank": 6,
             "rankTotal": 8,
@@ -117,15 +86,12 @@ export interface CountryInfo {
             "silver": 7,
             "bronze": 12,
             "total": 34,
-            
             "enDescription": "Netherlands",
             "enLongDescription": "Netherlands",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/NED.png"
           },
           {
             "noc": "GBR",
-            "description": "英国",
-            "longDescription": "英国",
             "rank": 7,
             "sortRank": 7,
             "rankTotal": 3,
@@ -135,15 +101,12 @@ export interface CountryInfo {
             "silver": 22,
             "bronze": 29,
             "total": 65,
-            
             "enDescription": "Great Britain",
             "enLongDescription": "Great Britain",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/GBR.png"
           },
           {
             "noc": "KOR",
-            "description": "韩国",
-            "longDescription": "大韩民国",
             "rank": 8,
             "sortRank": 8,
             "rankTotal": 10,
@@ -152,16 +115,13 @@ export interface CountryInfo {
             "gold": 13,
             "silver": 9,
             "bronze": 10,
-            "total": 32,
-            
+            "total": 32,          
             "enDescription": "Korea",
             "enLongDescription": "Republic of Korea",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/KOR.png"
           },
           {
             "noc": "ITA",
-            "description": "意大利",
-            "longDescription": "意大利",
             "rank": 9,
             "sortRank": 9,
             "rankTotal": 7,
@@ -171,15 +131,12 @@ export interface CountryInfo {
             "silver": 13,
             "bronze": 15,
             "total": 40,
-            
             "enDescription": "Italy",
             "enLongDescription": "Italy",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ITA.png"
           },
           {
             "noc": "GER",
-            "description": "德国",
-            "longDescription": "德国",
             "rank": 10,
             "sortRank": 10,
             "rankTotal": 9,
@@ -188,16 +145,13 @@ export interface CountryInfo {
             "gold": 12,
             "silver": 13,
             "bronze": 8,
-            "total": 33,
-            
+            "total": 33,           
             "enDescription": "Germany",
             "enLongDescription": "Germany",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/GER.png"
           },
           {
             "noc": "NZL",
-            "description": "新西兰",
-            "longDescription": "新西兰",
             "rank": 11,
             "sortRank": 11,
             "rankTotal": 12,
@@ -206,16 +160,13 @@ export interface CountryInfo {
             "gold": 10,
             "silver": 7,
             "bronze": 3,
-            "total": 20,
-            
+            "total": 20,           
             "enDescription": "New Zealand",
             "enLongDescription": "New Zealand",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/NZL.png"
           },
           {
             "noc": "CAN",
-            "description": "加拿大",
-            "longDescription": "加拿大",
             "rank": 12,
             "sortRank": 12,
             "rankTotal": 11,
@@ -224,16 +175,13 @@ export interface CountryInfo {
             "gold": 9,
             "silver": 7,
             "bronze": 11,
-            "total": 27,
-            
+            "total": 27,         
             "enDescription": "Canada",
             "enLongDescription": "Canada",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CAN.png"
           },
           {
             "noc": "UZB",
-            "description": "乌兹别克斯坦",
-            "longDescription": "乌兹别克斯坦",
             "rank": 13,
             "sortRank": 13,
             "rankTotal": 16,
@@ -242,16 +190,13 @@ export interface CountryInfo {
             "gold": 8,
             "silver": 2,
             "bronze": 3,
-            "total": 13,
-            
+            "total": 13,       
             "enDescription": "Uzbekistan",
             "enLongDescription": "Uzbekistan",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/UZB.png"
           },
           {
             "noc": "HUN",
-            "description": "匈牙利",
-            "longDescription": "匈牙利",
             "rank": 14,
             "sortRank": 14,
             "rankTotal": 14,
@@ -260,16 +205,13 @@ export interface CountryInfo {
             "gold": 6,
             "silver": 7,
             "bronze": 6,
-            "total": 19,
-            
+            "total": 19,      
             "enDescription": "Hungary",
             "enLongDescription": "Hungary",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/HUN.png"
           },
           {
             "noc": "ESP",
-            "description": "西班牙",
-            "longDescription": "西班牙",
             "rank": 15,
             "sortRank": 15,
             "rankTotal": 15,
@@ -278,16 +220,13 @@ export interface CountryInfo {
             "gold": 5,
             "silver": 4,
             "bronze": 9,
-            "total": 18,
-            
+            "total": 18,     
             "enDescription": "Spain",
             "enLongDescription": "Spain",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ESP.png"
           },
           {
             "noc": "SWE",
-            "description": "瑞典",
-            "longDescription": "瑞典",
             "rank": 16,
             "sortRank": 16,
             "rankTotal": 19,
@@ -297,15 +236,12 @@ export interface CountryInfo {
             "silver": 4,
             "bronze": 3,
             "total": 11,
-            
             "enDescription": "Sweden",
             "enLongDescription": "Sweden",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/SWE.png"
           },
           {
             "noc": "KEN",
-            "description": "肯尼亚",
-            "longDescription": "肯尼亚",
             "rank": 17,
             "sortRank": 17,
             "rankTotal": 19,
@@ -315,15 +251,12 @@ export interface CountryInfo {
             "silver": 2,
             "bronze": 5,
             "total": 11,
-            
             "enDescription": "Kenya",
             "enLongDescription": "Kenya",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/KEN.png"
           },
           {
             "noc": "NOR",
-            "description": "挪威",
-            "longDescription": "挪威",
             "rank": 18,
             "sortRank": 18,
             "rankTotal": 26,
@@ -333,15 +266,12 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 3,
             "total": 8,
-            
             "enDescription": "Norway",
             "enLongDescription": "Norway",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/NOR.png"
           },
           {
             "noc": "IRL",
-            "description": "爱尔兰",
-            "longDescription": "爱尔兰",
             "rank": 19,
             "sortRank": 19,
             "rankTotal": 30,
@@ -351,15 +281,12 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 3,
             "total": 7,
-            
             "enDescription": "Ireland",
             "enLongDescription": "Ireland",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/IRL.png"
           },
           {
             "noc": "BRA",
-            "description": "巴西",
-            "longDescription": "巴西",
             "rank": 20,
             "sortRank": 20,
             "rankTotal": 12,
@@ -369,15 +296,12 @@ export interface CountryInfo {
             "silver": 7,
             "bronze": 10,
             "total": 20,
-            
             "enDescription": "Brazil",
             "enLongDescription": "Brazil",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/BRA.png"
           },
           {
             "noc": "IRI",
-            "description": "伊朗",
-            "longDescription": "伊朗伊斯兰共和国",
             "rank": 21,
             "sortRank": 21,
             "rankTotal": 17,
@@ -387,15 +311,12 @@ export interface CountryInfo {
             "silver": 6,
             "bronze": 3,
             "total": 12,
-            
             "enDescription": "IR Iran",
             "enLongDescription": "Islamic Republic of Iran",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/IRI.png"
           },
           {
             "noc": "UKR",
-            "description": "乌克兰",
-            "longDescription": "乌克兰",
             "rank": 22,
             "sortRank": 22,
             "rankTotal": 17,
@@ -405,15 +326,12 @@ export interface CountryInfo {
             "silver": 5,
             "bronze": 4,
             "total": 12,
-            
             "enDescription": "Ukraine",
             "enLongDescription": "Ukraine",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/UKR.png"
           },
           {
             "noc": "ROU",
-            "description": "罗马尼亚",
-            "longDescription": "罗马尼亚",
             "rank": 23,
             "sortRank": 23,
             "rankTotal": 23,
@@ -423,15 +341,12 @@ export interface CountryInfo {
             "silver": 4,
             "bronze": 2,
             "total": 9,
-            
             "enDescription": "Romania",
             "enLongDescription": "Romania",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ROU.png"
           },
           {
             "noc": "GEO",
-            "description": "格鲁吉亚",
-            "longDescription": "格鲁吉亚",
             "rank": 24,
             "sortRank": 24,
             "rankTotal": 30,
@@ -441,15 +356,12 @@ export interface CountryInfo {
             "silver": 3,
             "bronze": 1,
             "total": 7,
-            
             "enDescription": "Georgia",
             "enLongDescription": "Georgia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/GEO.png"
           },
           {
             "noc": "BEL",
-            "description": "比利时",
-            "longDescription": "比利时",
             "rank": 25,
             "sortRank": 25,
             "rankTotal": 21,
@@ -459,15 +371,12 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 6,
             "total": 10,
-            
             "enDescription": "Belgium",
             "enLongDescription": "Belgium",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/BEL.png"
           },
           {
             "noc": "BUL",
-            "description": "保加利亚",
-            "longDescription": "保加利亚",
             "rank": 26,
             "sortRank": 26,
             "rankTotal": 30,
@@ -477,15 +386,12 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 3,
             "total": 7,
-            
             "enDescription": "Bulgaria",
             "enLongDescription": "Bulgaria",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/BUL.png"
           },
           {
             "noc": "SRB",
-            "description": "塞尔维亚",
-            "longDescription": "塞尔维亚",
             "rank": 27,
             "sortRank": 27,
             "rankTotal": 44,
@@ -495,15 +401,12 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 1,
             "total": 5,
-            
             "enDescription": "Serbia",
             "enLongDescription": "Serbia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/SRB.png"
           },
           {
             "noc": "CZE",
-            "description": "捷克",
-            "longDescription": "捷克",
             "rank": 28,
             "sortRank": 28,
             "rankTotal": 44,
@@ -513,15 +416,12 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 2,
             "total": 5,
-            
             "enDescription": "Czechia",
             "enLongDescription": "Czechia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CZE.png"
           },
           {
             "noc": "DEN",
-            "description": "丹麦",
-            "longDescription": "丹麦",
             "rank": 29,
             "sortRank": 29,
             "rankTotal": 23,
@@ -531,15 +431,12 @@ export interface CountryInfo {
             "silver": 2,
             "bronze": 5,
             "total": 9,
-            
             "enDescription": "Denmark",
             "enLongDescription": "Denmark",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/DEN.png"
           },
           {
             "noc": "AZE",
-            "description": "阿塞拜疆",
-            "longDescription": "阿塞拜疆",
             "rank": 30,
             "sortRank": 30,
             "rankTotal": 30,
@@ -549,15 +446,12 @@ export interface CountryInfo {
             "silver": 2,
             "bronze": 3,
             "total": 7,
-            
             "enDescription": "Azerbaijan",
             "enLongDescription": "Azerbaijan",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/AZE.png"
           },
           {
             "noc": "CRO",
-            "description": "克罗地亚",
-            "longDescription": "克罗地亚",
             "rank": 30,
             "sortRank": 31,
             "rankTotal": 30,
@@ -567,15 +461,12 @@ export interface CountryInfo {
             "silver": 2,
             "bronze": 3,
             "total": 7,
-            
             "enDescription": "Croatia",
             "enLongDescription": "Croatia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CRO.png"
           },
           {
             "noc": "CUB",
-            "description": "古巴",
-            "longDescription": "古巴",
             "rank": 32,
             "sortRank": 32,
             "rankTotal": 23,
@@ -585,15 +476,12 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 6,
             "total": 9,
-            
             "enDescription": "Cuba",
             "enLongDescription": "Cuba",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CUB.png"
           },
           {
             "noc": "BRN",
-            "description": "巴林",
-            "longDescription": "巴林",
             "rank": 33,
             "sortRank": 33,
             "rankTotal": 49,
@@ -603,15 +491,12 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 1,
             "total": 4,
-            
             "enDescription": "Bahrain",
             "enLongDescription": "Bahrain",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/BRN.png"
           },
           {
             "noc": "SLO",
-            "description": "斯洛文尼亚",
-            "longDescription": "斯洛文尼亚",
             "rank": 34,
             "sortRank": 34,
             "rankTotal": 58,
@@ -621,15 +506,12 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 0,
             "total": 3,
-            
             "enDescription": "Slovenia",
             "enLongDescription": "Slovenia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/SLO.png"
           },
           {
             "noc": "TPE",
-            "description": "Chinese Taipei",
-            "longDescription": "Chinese Taipei",
             "rank": 35,
             "sortRank": 35,
             "rankTotal": 30,
@@ -639,15 +521,12 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 5,
             "total": 7,
-            
             "enDescription": "Chinese Taipei",
             "enLongDescription": "Chinese Taipei",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/TPE.png"
           },
           {
             "noc": "AUT",
-            "description": "奥地利",
-            "longDescription": "奥地利",
             "rank": 36,
             "sortRank": 36,
             "rankTotal": 44,
@@ -657,15 +536,12 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 3,
             "total": 5,
-            
             "enDescription": "Austria",
             "enLongDescription": "Austria",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/AUT.png"
           },
           {
             "noc": "HKG",
-            "description": "中国香港",
-            "longDescription": "中国香港",
             "rank": 37,
             "sortRank": 37,
             "rankTotal": 49,
@@ -675,15 +551,12 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 2,
             "total": 4,
-            
             "enDescription": "Hong Kong, China",
             "enLongDescription": "Hong Kong, China",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/HKG.png"
           },
           {
             "noc": "PHI",
-            "description": "菲律宾",
-            "longDescription": "菲律宾",
             "rank": 37,
             "sortRank": 38,
             "rankTotal": 49,
@@ -693,15 +566,12 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 2,
             "total": 4,
-            
             "enDescription": "Philippines",
             "enLongDescription": "Philippines",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/PHI.png"
           },
           {
             "noc": "ALG",
-            "description": "阿尔及利亚",
-            "longDescription": "阿尔及利亚",
             "rank": 39,
             "sortRank": 39,
             "rankTotal": 58,
@@ -711,15 +581,12 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 1,
             "total": 3,
-            
             "enDescription": "Algeria",
             "enLongDescription": "Algeria",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ALG.png"
           },
           {
             "noc": "INA",
-            "description": "印度尼西亚",
-            "longDescription": "印度尼西亚",
             "rank": 39,
             "sortRank": 40,
             "rankTotal": 58,
@@ -729,15 +596,12 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 1,
             "total": 3,
-            
             "enDescription": "Indonesia",
             "enLongDescription": "Indonesia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/INA.png"
           },
           {
             "noc": "ISR",
-            "description": "以色列",
-            "longDescription": "以色列",
             "rank": 41,
             "sortRank": 41,
             "rankTotal": 30,
@@ -747,15 +611,12 @@ export interface CountryInfo {
             "silver": 5,
             "bronze": 1,
             "total": 7,
-            
             "enDescription": "Israel",
             "enLongDescription": "Israel",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ISR.png"
           },
           {
             "noc": "POL",
-            "description": "波兰",
-            "longDescription": "波兰",
             "rank": 42,
             "sortRank": 42,
             "rankTotal": 21,
@@ -765,15 +626,12 @@ export interface CountryInfo {
             "silver": 4,
             "bronze": 5,
             "total": 10,
-            
             "enDescription": "Poland",
             "enLongDescription": "Poland",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/POL.png"
           },
           {
             "noc": "KAZ",
-            "description": "哈萨克斯坦",
-            "longDescription": "哈萨克斯坦",
             "rank": 43,
             "sortRank": 43,
             "rankTotal": 30,
@@ -783,15 +641,12 @@ export interface CountryInfo {
             "silver": 3,
             "bronze": 3,
             "total": 7,
-            
             "enDescription": "Kazakhstan",
             "enLongDescription": "Kazakhstan",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/KAZ.png"
           },
           {
             "noc": "JAM",
-            "description": "牙买加",
-            "longDescription": "牙买加",
             "rank": 44,
             "sortRank": 44,
             "rankTotal": 38,
@@ -801,15 +656,12 @@ export interface CountryInfo {
             "silver": 3,
             "bronze": 2,
             "total": 6,
-            
             "enDescription": "Jamaica",
             "enLongDescription": "Jamaica",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/JAM.png"
           },
           {
             "noc": "RSA",
-            "description": "南非",
-            "longDescription": "南非",
             "rank": 44,
             "sortRank": 45,
             "rankTotal": 38,
@@ -819,15 +671,12 @@ export interface CountryInfo {
             "silver": 3,
             "bronze": 2,
             "total": 6,
-            
             "enDescription": "South Africa",
             "enLongDescription": "South Africa",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/RSA.png"
           },
           {
             "noc": "THA",
-            "description": "泰国",
-            "longDescription": "泰国",
             "rank": 44,
             "sortRank": 46,
             "rankTotal": 38,
@@ -837,15 +686,12 @@ export interface CountryInfo {
             "silver": 3,
             "bronze": 2,
             "total": 6,
-            
             "enDescription": "Thailand",
             "enLongDescription": "Thailand",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/THA.png"
           },
           {
             "noc": "ETH",
-            "description": "埃塞俄比亚",
-            "longDescription": "埃塞俄比亚",
             "rank": 47,
             "sortRank": 47,
             "rankTotal": 49,
@@ -855,15 +701,12 @@ export interface CountryInfo {
             "silver": 3,
             "bronze": 0,
             "total": 4,
-            
             "enDescription": "Ethiopia",
             "enLongDescription": "Ethiopia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ETH.png"
           },
           {
             "noc": "SUI",
-            "description": "瑞士",
-            "longDescription": "瑞士",
             "rank": 48,
             "sortRank": 48,
             "rankTotal": 26,
@@ -873,15 +716,12 @@ export interface CountryInfo {
             "silver": 2,
             "bronze": 5,
             "total": 8,
-            
             "enDescription": "Switzerland",
             "enLongDescription": "Switzerland",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/SUI.png"
           },
           {
             "noc": "ECU",
-            "description": "厄瓜多尔",
-            "longDescription": "厄瓜多尔",
             "rank": 49,
             "sortRank": 49,
             "rankTotal": 44,
@@ -891,15 +731,12 @@ export interface CountryInfo {
             "silver": 2,
             "bronze": 2,
             "total": 5,
-            
             "enDescription": "Ecuador",
             "enLongDescription": "Ecuador",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ECU.png"
           },
           {
             "noc": "POR",
-            "description": "葡萄牙",
-            "longDescription": "葡萄牙",
             "rank": 50,
             "sortRank": 50,
             "rankTotal": 49,
@@ -909,15 +746,12 @@ export interface CountryInfo {
             "silver": 2,
             "bronze": 1,
             "total": 4,
-            
             "enDescription": "Portugal",
             "enLongDescription": "Portugal",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/POR.png"
           },
           {
             "noc": "GRE",
-            "description": "希腊",
-            "longDescription": "希腊",
             "rank": 51,
             "sortRank": 51,
             "rankTotal": 26,
@@ -927,15 +761,12 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 6,
             "total": 8,
-            
             "enDescription": "Greece",
             "enLongDescription": "Greece",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/GRE.png"
           },
           {
             "noc": "ARG",
-            "description": "阿根廷",
-            "longDescription": "阿根廷",
             "rank": 52,
             "sortRank": 52,
             "rankTotal": 58,
@@ -945,15 +776,12 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 1,
             "total": 3,
-            
             "enDescription": "Argentina",
             "enLongDescription": "Argentina",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ARG.png"
           },
           {
             "noc": "EGY",
-            "description": "埃及",
-            "longDescription": "埃及",
             "rank": 52,
             "sortRank": 53,
             "rankTotal": 58,
@@ -963,15 +791,12 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 1,
             "total": 3,
-            
             "enDescription": "Egypt",
             "enLongDescription": "Egypt",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/EGY.png"
           },
           {
             "noc": "TUN",
-            "description": "突尼斯",
-            "longDescription": "突尼斯",
             "rank": 52,
             "sortRank": 54,
             "rankTotal": 58,
@@ -981,15 +806,12 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 1,
             "total": 3,
-            
             "enDescription": "Tunisia",
             "enLongDescription": "Tunisia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/TUN.png"
           },
           {
             "noc": "BOT",
-            "description": "博茨瓦纳",
-            "longDescription": "博茨瓦纳",
             "rank": 55,
             "sortRank": 55,
             "rankTotal": 66,
@@ -999,15 +821,12 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 0,
             "total": 2,
-            
             "enDescription": "Botswana",
             "enLongDescription": "Botswana",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/BOT.png"
           },
           {
             "noc": "CHI",
-            "description": "智利",
-            "longDescription": "智利",
             "rank": 55,
             "sortRank": 56,
             "rankTotal": 66,
@@ -1017,15 +836,12 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 0,
             "total": 2,
-            
             "enDescription": "Chile",
             "enLongDescription": "Chile",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CHI.png"
           },
           {
             "noc": "LCA",
-            "description": "圣卢西亚",
-            "longDescription": "圣卢西亚",
             "rank": 55,
             "sortRank": 57,
             "rankTotal": 66,
@@ -1035,15 +851,12 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 0,
             "total": 2,
-            
             "enDescription": "Saint Lucia",
             "enLongDescription": "Saint Lucia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/LCA.png"
           },
           {
             "noc": "UGA",
-            "description": "乌干达",
-            "longDescription": "乌干达",
             "rank": 55,
             "sortRank": 58,
             "rankTotal": 66,
@@ -1053,15 +866,12 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 0,
             "total": 2,
-            
             "enDescription": "Uganda",
             "enLongDescription": "Uganda",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/UGA.png"
           },
           {
             "noc": "DOM",
-            "description": "多米尼加",
-            "longDescription": "多米尼加",
             "rank": 59,
             "sortRank": 59,
             "rankTotal": 58,
@@ -1071,15 +881,12 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 2,
             "total": 3,
-            
             "enDescription": "Dominican Republic",
             "enLongDescription": "Dominican Republic",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/DOM.png"
           },
           {
             "noc": "GUA",
-            "description": "危地马拉",
-            "longDescription": "危地马拉",
             "rank": 60,
             "sortRank": 60,
             "rankTotal": 66,
@@ -1089,15 +896,12 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 1,
             "total": 2,
-            
             "enDescription": "Guatemala",
             "enLongDescription": "Guatemala",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/GUA.png"
           },
           {
             "noc": "MAR",
-            "description": "摩洛哥",
-            "longDescription": "摩洛哥",
             "rank": 60,
             "sortRank": 61,
             "rankTotal": 66,
@@ -1107,15 +911,12 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 1,
             "total": 2,
-            
             "enDescription": "Morocco",
             "enLongDescription": "Morocco",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/MAR.png"
           },
           {
             "noc": "DMA",
-            "description": "多米尼克",
-            "longDescription": "多米尼克",
             "rank": 62,
             "sortRank": 62,
             "rankTotal": 77,
@@ -1125,15 +926,12 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 0,
             "total": 1,
-            
             "enDescription": "Dominica",
             "enLongDescription": "Dominica",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/DMA.png"
           },
           {
             "noc": "PAK",
-            "description": "巴基斯坦",
-            "longDescription": "巴基斯坦",
             "rank": 62,
             "sortRank": 63,
             "rankTotal": 77,
@@ -1143,15 +941,12 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 0,
             "total": 1,
-            
             "enDescription": "Pakistan",
             "enLongDescription": "Pakistan",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/PAK.png"
           },
           {
             "noc": "TUR",
-            "description": "土耳其",
-            "longDescription": "土耳其",
             "rank": 64,
             "sortRank": 64,
             "rankTotal": 26,
@@ -1161,15 +956,12 @@ export interface CountryInfo {
             "silver": 3,
             "bronze": 5,
             "total": 8,
-            
             "enDescription": "T�rkiye",
             "enLongDescription": "T�rkiye",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/TUR.png"
           },
           {
             "noc": "MEX",
-            "description": "墨西哥",
-            "longDescription": "墨西哥",
             "rank": 65,
             "sortRank": 65,
             "rankTotal": 44,
@@ -1179,15 +971,12 @@ export interface CountryInfo {
             "silver": 3,
             "bronze": 2,
             "total": 5,
-            
             "enDescription": "Mexico",
             "enLongDescription": "Mexico",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/MEX.png"
           },
           {
             "noc": "ARM",
-            "description": "亚美尼亚",
-            "longDescription": "亚美尼亚",
             "rank": 66,
             "sortRank": 66,
             "rankTotal": 49,
@@ -1197,15 +986,12 @@ export interface CountryInfo {
             "silver": 3,
             "bronze": 1,
             "total": 4,
-            
             "enDescription": "Armenia",
             "enLongDescription": "Armenia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ARM.png"
           },
           {
             "noc": "COL",
-            "description": "哥伦比亚",
-            "longDescription": "哥伦比亚",
             "rank": 66,
             "sortRank": 67,
             "rankTotal": 49,
@@ -1215,15 +1001,12 @@ export interface CountryInfo {
             "silver": 3,
             "bronze": 1,
             "total": 4,
-            
             "enDescription": "Colombia",
             "enLongDescription": "Colombia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/COL.png"
           },
           {
             "noc": "KGZ",
-            "description": "吉尔吉斯斯坦",
-            "longDescription": "吉尔吉斯斯坦",
             "rank": 68,
             "sortRank": 68,
             "rankTotal": 38,
@@ -1233,15 +1016,12 @@ export interface CountryInfo {
             "silver": 2,
             "bronze": 4,
             "total": 6,
-            
             "enDescription": "Kyrgyzstan",
             "enLongDescription": "Kyrgyzstan",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/KGZ.png"
           },
           {
             "noc": "PRK",
-            "description": "朝鲜",
-            "longDescription": "朝鲜民主主义人民共和国",
             "rank": 68,
             "sortRank": 69,
             "rankTotal": 38,
@@ -1251,15 +1031,12 @@ export interface CountryInfo {
             "silver": 2,
             "bronze": 4,
             "total": 6,
-            
             "enDescription": "DPR Korea",
             "enLongDescription": "Democratic People's Republic of Korea",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/PRK.png"
           },
           {
             "noc": "LTU",
-            "description": "立陶宛",
-            "longDescription": "立陶宛",
             "rank": 70,
             "sortRank": 70,
             "rankTotal": 49,
@@ -1269,15 +1046,12 @@ export interface CountryInfo {
             "silver": 2,
             "bronze": 2,
             "total": 4,
-            
             "enDescription": "Lithuania",
             "enLongDescription": "Lithuania",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/LTU.png"
           },
           {
             "noc": "IND",
-            "description": "印度",
-            "longDescription": "印度",
             "rank": 71,
             "sortRank": 71,
             "rankTotal": 38,
@@ -1287,15 +1061,12 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 5,
             "total": 6,
-            
             "enDescription": "India",
             "enLongDescription": "India",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/IND.png"
           },
           {
             "noc": "MDA",
-            "description": "摩尔多瓦",
-            "longDescription": "摩尔多瓦共和国",
             "rank": 72,
             "sortRank": 72,
             "rankTotal": 49,
@@ -1305,15 +1076,12 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 3,
             "total": 4,
-            
             "enDescription": "Republic of Moldova",
             "enLongDescription": "Republic of Moldova",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/MDA.png"
           },
           {
             "noc": "KOS",
-            "description": "科索沃",
-            "longDescription": "科索沃",
             "rank": 73,
             "sortRank": 73,
             "rankTotal": 66,
@@ -1323,15 +1091,12 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 1,
             "total": 2,
-            
             "enDescription": "Kosovo",
             "enLongDescription": "Kosovo",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/KOS.png"
           },
           {
             "noc": "CYP",
-            "description": "塞浦路斯",
-            "longDescription": "塞浦路斯",
             "rank": 74,
             "sortRank": 74,
             "rankTotal": 77,
@@ -1341,15 +1106,12 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 0,
             "total": 1,
-            
             "enDescription": "Cyprus",
             "enLongDescription": "Cyprus",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CYP.png"
           },
           {
             "noc": "FIJ",
-            "description": "斐济",
-            "longDescription": "斐济",
             "rank": 74,
             "sortRank": 75,
             "rankTotal": 77,
@@ -1359,15 +1121,12 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 0,
             "total": 1,
-            
             "enDescription": "Fiji",
             "enLongDescription": "Fiji",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/FIJ.png"
           },
           {
             "noc": "JOR",
-            "description": "约旦",
-            "longDescription": "约旦",
             "rank": 74,
             "sortRank": 76,
             "rankTotal": 77,
@@ -1377,15 +1136,12 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 0,
             "total": 1,
-            
             "enDescription": "Jordan",
             "enLongDescription": "Jordan",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/JOR.png"
           },
           {
             "noc": "MGL",
-            "description": "蒙古",
-            "longDescription": "蒙古",
             "rank": 74,
             "sortRank": 77,
             "rankTotal": 77,
@@ -1395,15 +1151,12 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 0,
             "total": 1,
-            
             "enDescription": "Mongolia",
             "enLongDescription": "Mongolia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/MGL.png"
           },
           {
             "noc": "PAN",
-            "description": "巴拿马",
-            "longDescription": "巴拿马",
             "rank": 74,
             "sortRank": 78,
             "rankTotal": 77,
@@ -1413,15 +1166,12 @@ export interface CountryInfo {
             "silver": 1,
             "bronze": 0,
             "total": 1,
-            
             "enDescription": "Panama",
             "enLongDescription": "Panama",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/PAN.png"
           },
           {
             "noc": "TJK",
-            "description": "塔吉克斯坦",
-            "longDescription": "塔吉克斯坦",
             "rank": 79,
             "sortRank": 79,
             "rankTotal": 58,
@@ -1431,15 +1181,12 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 3,
             "total": 3,
-            
             "enDescription": "Tajikistan",
             "enLongDescription": "Tajikistan",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/TJK.png"
           },
           {
             "noc": "ALB",
-            "description": "阿尔巴尼亚",
-            "longDescription": "阿尔巴尼亚",
             "rank": 80,
             "sortRank": 80,
             "rankTotal": 66,
@@ -1449,15 +1196,12 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 2,
             "total": 2,
-            
             "enDescription": "Albania",
             "enLongDescription": "Albania",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ALB.png"
           },
           {
             "noc": "GRN",
-            "description": "格林纳达",
-            "longDescription": "格林纳达",
             "rank": 80,
             "sortRank": 81,
             "rankTotal": 66,
@@ -1467,15 +1211,12 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 2,
             "total": 2,
-            
             "enDescription": "Grenada",
             "enLongDescription": "Grenada",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/GRN.png"
           },
           {
             "noc": "MAS",
-            "description": "马来西亚",
-            "longDescription": "马来西亚",
             "rank": 80,
             "sortRank": 82,
             "rankTotal": 66,
@@ -1485,15 +1226,12 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 2,
             "total": 2,
-            
             "enDescription": "Malaysia",
             "enLongDescription": "Malaysia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/MAS.png"
           },
           {
             "noc": "PUR",
-            "description": "波多黎各",
-            "longDescription": "波多黎各",
             "rank": 80,
             "sortRank": 83,
             "rankTotal": 66,
@@ -1503,15 +1241,12 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 2,
             "total": 2,
-            
             "enDescription": "Puerto Rico",
             "enLongDescription": "Puerto Rico",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/PUR.png"
           },
           {
             "noc": "CIV",
-            "description": "科特迪瓦",
-            "longDescription": "科特迪瓦",
             "rank": 84,
             "sortRank": 84,
             "rankTotal": 77,
@@ -1521,15 +1256,12 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 1,
             "total": 1,
-            
             "enDescription": "C�te d'Ivoire",
             "enLongDescription": "C�te d'Ivoire",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CIV.png"
           },
           {
             "noc": "CPV",
-            "description": "佛得角",
-            "longDescription": "佛得角",
             "rank": 84,
             "sortRank": 85,
             "rankTotal": 77,
@@ -1539,15 +1271,12 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 1,
             "total": 1,
-            
             "enDescription": "Cabo Verde",
             "enLongDescription": "Cabo Verde",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CPV.png"
           },
           {
             "noc": "EOR",
-            "description": "奥林匹克难民代表团",
-            "longDescription": "奥林匹克难民代表团",
             "rank": 84,
             "sortRank": 86,
             "rankTotal": 77,
@@ -1557,15 +1286,12 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 1,
             "total": 1,
-            
             "enDescription": "EOR",
             "enLongDescription": "Refugee Olympic Team",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/EOR.png"
           },
           {
             "noc": "PER",
-            "description": "秘鲁",
-            "longDescription": "秘鲁",
             "rank": 84,
             "sortRank": 87,
             "rankTotal": 77,
@@ -1575,15 +1301,12 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 1,
             "total": 1,
-            
             "enDescription": "Peru",
             "enLongDescription": "Peru",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/PER.png"
           },
           {
             "noc": "QAT",
-            "description": "卡塔尔",
-            "longDescription": "卡塔尔",
             "rank": 84,
             "sortRank": 88,
             "rankTotal": 77,
@@ -1593,15 +1316,12 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 1,
             "total": 1,
-            
             "enDescription": "Qatar",
             "enLongDescription": "Qatar",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/QAT.png"
           },
           {
             "noc": "SGP",
-            "description": "新加坡",
-            "longDescription": "新加坡",
             "rank": 84,
             "sortRank": 89,
             "rankTotal": 77,
@@ -1611,15 +1331,12 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 1,
             "total": 1,
-            
             "enDescription": "Singapore",
             "enLongDescription": "Singapore",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/SGP.png"
           },
           {
             "noc": "SVK",
-            "description": "斯洛伐克",
-            "longDescription": "斯洛伐克",
             "rank": 84,
             "sortRank": 90,
             "rankTotal": 77,
@@ -1629,15 +1346,12 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 1,
             "total": 1,
-            
             "enDescription": "Slovakia",
             "enLongDescription": "Slovakia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/SVK.png"
           },
           {
             "noc": "ZAM",
-            "description": "赞比亚",
-            "longDescription": "赞比亚",
             "rank": 84,
             "sortRank": 91,
             "rankTotal": 77,
@@ -1647,10 +1361,9 @@ export interface CountryInfo {
             "silver": 0,
             "bronze": 1,
             "total": 1,
-            
             "enDescription": "Zambia",
             "enLongDescription": "Zambia",
             "flagUrl": "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ZAM.png"
           }
-  ];
-  
+  ]
+}
