@@ -3,11 +3,10 @@
     <div class="country-info bg-blue-500 shadow-lg p-4 rounded-lg mb-5 max-w-2xl mx-auto sm:relative sm:left-0">
       <div class="flag-container">
         <img v-if="country?.flagUrl" :src="country?.flagUrl" alt="Country Flag" class="w-12 h-8 object-cover" />
-      <h1 class="text-xl font-bold text-center">{{ country?.enLongDescription }} ({{ country?.noc }})</h1>
-      
+        <h1 class="text-xl font-bold text-center">{{ country?.enLongDescription }} ({{ country?.noc }})</h1>
+      </div>
+      <p class="text-center">Rank: {{ country?.rank }}</p>
     </div>
-      <p class="text-center">Rank: {{ country.rank }}</p>
-  </div>
 
     <div v-if="country" class="competition-info bg-white shadow-lg p-4 rounded-lg mb-5 max-w-2xl mx-auto sm:relative sm:left-0 sm:top-1/3">
       <div class="medal-info mb-5">
@@ -51,8 +50,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { useRouter } from 'vue-router';
-import { countries } from '@/countryinfo'; // Assuming countries data is in db.ts
-import sportdb from '@/sportdb.json'; // Import the full sportdb.json
+import {countries} from '@/countryinfo.json';
+import sportdb from '@/sportdb.json';
 import SportList from '@components/SportList.vue';
 
 interface Country {
@@ -91,12 +90,11 @@ export default defineComponent({
   },
   methods: {
     handleSportClick(sportName: string) {
-      const { noc } = this.$props;
       this.$router.push({
         name: 'SportDetail',
         params: {
-          noc: noc,
-          sportName: sportName,
+          noc: this.noc,
+          sportName,
         },
       });
     },

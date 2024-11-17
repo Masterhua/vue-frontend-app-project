@@ -58,20 +58,6 @@ import RankingList from '@/components/RankingList.vue';
 import Navigation from '@/components/Navigation.vue';
 import countryData from '@/countryinfo.json';
 
-interface Country {
-  noc: string;
-  enLongDescription: string;
-  rank: number;
-  gold: number;
-  silver: number;
-  bronze: number;
-  total: number;
-  sortRank: number;
-  rankTotal: number;
-  sortTotalRank: number;
-  flagUrl: string;
-}
-
 export default defineComponent({
   name: 'HomeView',
   components: {

@@ -4,14 +4,16 @@
     "module": "esnext",
     "moduleResolution": "node",
     "esModuleInterop": true,
+    "resolveJsonModule": true,
     "allowJs": true,
     "jsx": "preserve",
     "strict": true,
-    "baseUrl": "src",
+    "baseUrl": "./src",
     "paths": {
       "@components/*": ["components/*"],
       "@/*": ["*"],
-      "@/sportdb.json": ["sportdb.json"]
+      "@sportdb.json": ["sportdb.json"],
+      "@countryinfo.json": ["countryinfo.json"]
     },
     "types": [
       "node",
