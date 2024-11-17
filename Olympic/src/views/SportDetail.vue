@@ -20,7 +20,7 @@
 <script lang="ts">
 import { defineComponent, computed } from 'vue';
 import { useRoute } from 'vue-router';
-import { countries } from '@/countryinfo';
+import { countries } from '@/countryinfo.json';
 import sportdb from '@/sportdb.json'; // 导入整个 JSON 文件
 import CommentList from '@components/CommentList.vue';
 
