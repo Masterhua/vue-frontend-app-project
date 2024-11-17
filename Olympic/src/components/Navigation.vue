@@ -33,11 +33,26 @@
     </ul>
   </nav>
 </template>
-
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import { useRouter } from 'vue-router';
-import { countries, CountryInfo } from '@/countryinfo.json';
+import countryData from '@/countryinfo.json';
+
+interface CountryInfo {
+  noc: string;
+  rank: number;
+  sortRank: number;
+  rankTotal: number;
+  sortTotalRank: number;
+  nocSlug: string;
+  gold: number;
+  silver: number;
+  bronze: number;
+  total: number;
+  enDescription: string;
+  enLongDescription: string;
+  flagUrl: string;
+}
 
 export default defineComponent({
   props: {
@@ -51,10 +66,12 @@ export default defineComponent({
     const searchQuery = ref<string>('');
     const filteredSuggestions = ref<CountryInfo[]>([]);
     const showList = ref(false);
+    
+    const countries: CountryInfo[] = countryData.countries;
 
     const filterSuggestions = () => {
       if (searchQuery.value) {
-        filteredSuggestions.value = countries.filter(country =>
+        filteredSuggestions.value = countries.filter((country) =>
           country.enDescription.toLowerCase().startsWith(searchQuery.value.toLowerCase())
         );
         showList.value = filteredSuggestions.value.length > 0;
@@ -86,8 +103,8 @@ export default defineComponent({
 
     const menuItems = [
       { name: 'Home', link: '/' },
-      { name: 'Aboutus', link: '/about' },
-      { name: 'Contact', link: '/contact' }
+      { name: 'About Us', link: '/about' },
+      { name: 'Contact', link: '/contact' },
     ];
 
     return {
