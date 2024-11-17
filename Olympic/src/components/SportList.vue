@@ -1,13 +1,18 @@
 <template>
-  <div class="sport-list-container">
-    <h2>Sports</h2>
-    <ul class="sport-list">
-      <li v-for="sport in disciplines" :key="sport.name" @click="onSportClick(sport.name)">
-        <span class="sport-name">{{ sport.name }}</span>
-        <span class="medal-summary">
-          <span>Gold: {{ sport.gold }}</span>
-          <span>Silver: {{ sport.silver }}</span>
-          <span>Bronze: {{ sport.bronze }}</span>
+  <div class="sport-list-container p-5">
+    <h2 class="text-2xl font-bold mb-4">Sports</h2>
+    <ul class="sport-list list-none p-0 m-0">
+      <li
+        v-for="sport in disciplines"
+        :key="sport.name"
+        @click="onSportClick(sport.name)"
+        class="flex justify-between items-center p-4 mb-4 bg-gray-100 rounded-md cursor-pointer hover:bg-gray-200 transition"
+      >
+        <span class="sport-name text-lg font-medium">{{ sport.name }}</span>
+        <span class="medal-summary text-sm flex gap-4">
+          <span class="text-gray-600">Gold: {{ sport.gold }}</span>
+          <span class="text-gray-600">Silver: {{ sport.silver }}</span>
+          <span class="text-gray-600">Bronze: {{ sport.bronze }}</span>
         </span>
       </li>
     </ul>
@@ -39,58 +44,8 @@ export default defineComponent({
   },
   methods: {
     onSportClick(sportName: string) {
-      // 使用 router.push 跳转到 SportDetail 页面，传递 noc 和 sportName 参数
       this.$router.push({ name: 'sport-detail', params: { noc: this.noc, sportName } });
     },
   },
 });
 </script>
-
-<style scoped>
-.sport-list-container {
-  padding: 20px;
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.sport-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.sport-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: #f9f9f9;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.sport-list li:hover {
-  background-color: #e0e0e0;
-}
-
-.sport-name {
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.medal-summary {
-  font-size: 14px;
-  display: flex;
-  gap: 10px;
-}
-
-.medal-summary span {
-  color: #555;
-}
-</style>

@@ -1,74 +1,107 @@
 <template>
-  <!-- 导航栏 -->
   <Navigation :menuItems="menuItems" />
 
-  <div class="home-view">
-    <!-- 排行榜 -->
-    <RankingList :countries="paginatedCountries" @country-click="goToCountryDetail" />
-
-    <!-- 分页控件 -->
-    <div class="pagination">
-      <button @click="previousPage" :disabled="currentPage === 1">Previous</button>
-      <span>Page {{ currentPage }} of {{ totalPages }}</span>
-      <button @click="nextPage" :disabled="currentPage === totalPages">Next</button>
+  <div class="home-view flex justify-center items-start p-4">
+    <div class="ranking-container w-2/5">
+      <h1 class="text-4xl font-bold">Welcome to Olympic report application</h1>
+      <RankingList :countries="paginatedCountries" @country-click="goToCountryDetail" />
     </div>
+  </div>
+
+  <div class="pagination flex justify-center gap-4 items-center mt-6">
+    <button @click="previousPage" :disabled="currentPage === 1" class="pagination-btn" :class="{ 'cursor-not-allowed bg-gray-400': currentPage === 1 }">Previous</button>
+    <span>Page {{ currentPage }} of {{ totalPages }}</span>
+    <button @click="nextPage" :disabled="currentPage === totalPages" class="pagination-btn" :class="{ 'cursor-not-allowed bg-gray-400': currentPage === totalPages }">Next</button>
+  </div>
+
+  <div class="mt-6 text-center">
+    <p>Enter a number to change the number of Country per page (1-10):</p>
+    <div class="flex justify-center mt-4">
+      <input
+        v-model="inputItemsPerPage"
+        type="number"
+        min="1"
+        max="10"
+        class="p-2 border rounded"
+        placeholder="Items per page"
+        @input="validateInput"
+      />
+      <button @click="updateItemsPerPage" class="ml-2 p-2 bg-blue-500 text-white rounded">Update</button>
+    </div>
+    <p v-if="inputError" class="text-red-500 mt-2">Please enter a number between 1 and 10.</p>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref, computed } from 'vue';
-import { countries } from '@/db'; // 从 db.ts 获取国家数据
+import { countries } from '@/countryinfo';
 import { useRouter } from 'vue-router';
-import RankingList from '@/components/RankingList.vue'; // 假设排行榜组件位置
-import Navigation from '@/components/Navigation.vue'; // 导入导航栏组件
+import RankingList from '@/components/RankingList.vue';
+import Navigation from '@/components/Navigation.vue';
 
 export default defineComponent({
   name: 'HomeView',
   components: {
     RankingList,
-    Navigation, // 添加 Navigation 组件
+    Navigation,
   },
   setup() {
     const router = useRouter();
-
-    // 分页参数
-    const itemsPerPage = 5;
+    const itemsPerPage = ref(5);
     const currentPage = ref(1);
+    const inputItemsPerPage = ref(itemsPerPage.value);
+    const inputError = ref(false);
 
-    // 计算分页后的国家列表
     const paginatedCountries = computed(() => {
-      const startIndex = (currentPage.value - 1) * itemsPerPage;
-      return countries.slice(startIndex, startIndex + itemsPerPage);
+      const startIndex = (currentPage.value - 1) * itemsPerPage.value;
+      return countries.slice(startIndex, startIndex + itemsPerPage.value);
     });
 
-    // 计算总页数
     const totalPages = computed(() => {
-      return Math.ceil(countries.length / itemsPerPage);
+      return Math.ceil(countries.length / itemsPerPage.value);
     });
 
-    // 上一页
     const previousPage = () => {
       if (currentPage.value > 1) {
         currentPage.value--;
       }
     };
 
-    // 下一页
     const nextPage = () => {
       if (currentPage.value < totalPages.value) {
         currentPage.value++;
       }
     };
 
-    // 点击国家名称时跳转到该国的详细信息页面
     const goToCountryDetail = (noc: string) => {
       router.push({ name: 'country-detail', params: { noc } });
     };
 
-    // 导航栏的菜单项
     const menuItems = [
       { name: 'Home', link: '/' },
     ];
+
+    const validateInput = () => {
+      const input = inputItemsPerPage.value;
+      if (input < 1) {
+        inputItemsPerPage.value = 1;
+      } else if (input > 10) {
+        inputItemsPerPage.value = 10;
+      }
+
+      inputError.value = !(input >= 1 && input <= 10);
+    };
+
+    const updateItemsPerPage = () => {
+      const newItemsPerPage = parseInt(inputItemsPerPage.value.toString(), 10);
+      if (newItemsPerPage >= 1 && newItemsPerPage <= 10) {
+        itemsPerPage.value = newItemsPerPage;
+        currentPage.value = 1;  // 返回第一页
+        inputError.value = false; // 重置错误提示
+      } else {
+        inputError.value = true;
+      }
+    };
 
     return {
       currentPage,
@@ -78,6 +111,10 @@ export default defineComponent({
       nextPage,
       goToCountryDetail,
       menuItems,
+      inputItemsPerPage,
+      inputError,
+      updateItemsPerPage,
+      validateInput,
     };
   },
 });
@@ -85,32 +122,22 @@ export default defineComponent({
 
 <style scoped>
 .home-view {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 16px;
+  @apply max-w-full mx-auto p-4;
+}
+
+.ranking-container {
+  @apply w-2/5;
 }
 
 .pagination {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 20px;
+  @apply flex justify-center gap-4 items-center mt-6;
+}
+
+.pagination-btn {
+  @apply px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700;
 }
 
 button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
-button {
-  padding: 8px 16px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-}
-
-button:hover:not(:disabled) {
-  background-color: #0056b3;
+  @apply bg-gray-400 cursor-not-allowed;
 }
 </style>

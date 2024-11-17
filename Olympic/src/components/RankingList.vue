@@ -1,6 +1,5 @@
 <template>
-  <!-- 排名、金、银、铜的标题 -->
-  <div class="ranking-header">
+  <div class="grid grid-cols-5 font-bold mb-2 py-3 px-0 border-b-2 border-gray-300 bg-gray-100 text-center">
     <span>Rank</span>
     <span>Country</span>
     <span>Gold</span>
@@ -9,18 +8,16 @@
   </div>
 
   <div class="ranking-list">
-    <!-- 排行榜内容 -->
     <ul>
-      <li v-for="country in countries" :key="country.noc" @click="onCountryClick(country.noc)">
-        <span>{{ country.rank }}</span>
-        <!-- 国旗和国家名称绑定在一起 -->
-        <span class="country-column">
-          <img :src="country.flagUrl" alt="Flag" />
+      <li v-for="country in countries" :key="country.noc" @click="onCountryClick(country.noc)" class="grid grid-cols-5 items-center py-2 px-0 cursor-pointer hover:bg-gray-50">
+        <span class="text-left">{{ country.rank }}</span>
+        <span class="flex items-center text-left">
+          <img :src="country.flagUrl" alt="Flag" class="w-8 h-6 mr-2" />
           <span>{{ country.noc }}</span>
         </span>
-        <span>{{ country.gold }}</span>
-        <span>{{ country.silver }}</span>
-        <span>{{ country.bronze }}</span>
+        <span class="text-center">{{ country.gold }}</span>
+        <span class="text-center">{{ country.silver }}</span>
+        <span class="text-center">{{ country.bronze }}</span>
       </li>
     </ul>
   </div>
@@ -29,21 +26,20 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-// 定义 Country 类型
 interface Country {
-  noc: string; // 国家代码
-  rank: number; // 排名
-  gold: number; // 金牌数
-  silver: number; // 银牌数
-  bronze: number; // 铜牌数
-  flagUrl: string; // 国旗图片 URL
+  noc: string;
+  rank: number;
+  gold: number;
+  silver: number;
+  bronze: number;
+  flagUrl: string;
 }
 
 export default defineComponent({
   name: 'RankingList',
   props: {
     countries: {
-      type: Array as () => Country[], // 将类型定义为包含 Country 对象的数组
+      type: Array as () => Country[],
       required: true,
     },
   },
@@ -60,52 +56,5 @@ export default defineComponent({
 .ranking-list {
   text-align: left;
   margin: 0 auto;
-}
-
-.ranking-header {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr 1fr 1fr;  /* 增加 Country 列的宽度比例为 4fr */
-  font-weight: bold;
-  margin-bottom: 10px;
-  padding: 12px 0;
-  border-bottom: 2px solid #ddd;
-  background-color: #f8f8f8;
-  text-align: center;
-}
-
-.ranking-header span {
-  padding: 0 10px;
-}
-
-.ranking-list ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.ranking-list li {
-  width: 400px;
-  display: grid;
-  grid-template-columns: 1.5fr 2.5fr 1fr 1fr 1fr;  /* 使 Country 列更宽，比例设置为 4fr */
-  align-items: center;
-  margin: 0;
-  padding: 10px 0;
-  cursor: pointer;
-  text-align: left;
-}
-
-.ranking-list li:hover {
-  background-color: #f0f0f0;
-}
-
-.ranking-list img {
-  width: 35px;
-  height: 25px;
-  margin-right: 10px;
-}
-
-.ranking-list span {
-  margin-left: 5px;
-  padding: 0 8px;
 }
 </style>

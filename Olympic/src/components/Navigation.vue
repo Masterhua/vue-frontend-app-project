@@ -1,10 +1,10 @@
 <template>
-  <nav class="navigation">
-    <ul>
+  <nav class="bg-gray-800 text-white fixed w-full top-0 left-0 z-50 p-3">
+    <ul class="flex items-center gap-4">
       <li v-for="item in menuItems" :key="item.name">
-        <a :href="item.link">{{ item.name }}</a>
+        <a :href="item.link" class="hover:underline">{{ item.name }}</a>
       </li>
-      <li class="search-container">
+      <li class="relative flex items-center gap-2">
         <input
           type="text"
           v-model="searchQuery"
@@ -12,13 +12,23 @@
           @keyup="filterSuggestions"
           @focus="showSuggestions"
           @blur="hideSuggestions"
+          class="px-3 py-2 border border-gray-300 rounded w-48 focus:outline-none focus:ring focus:ring-blue-300"
         />
-        <button @click="searchCountry(searchQuery)">Search</button>
-        <ul v-if="showList && filteredSuggestions.length" class="suggestions">
+        <button
+          @click="searchCountry(searchQuery)"
+          class="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-black rounded"
+        >
+          Search
+        </button>
+        <ul
+          v-if="showList && filteredSuggestions.length"
+          class="absolute top-12 left-0 w-full bg-white border border-gray-300 rounded shadow max-h-40 overflow-y-auto z-50"
+        >
           <li
             v-for="suggestion in filteredSuggestions"
             :key="suggestion.noc"
             @click="selectSuggestion(suggestion)"
+            class="px-3 py-2 cursor-pointer hover:bg-blue-500 hover:text-white"
           >
             {{ suggestion.enDescription }}
           </li>
@@ -31,7 +41,7 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import { useRouter } from 'vue-router';
-import { countries, CountryInfo } from '@/db';
+import { countries, CountryInfo } from '@/countryinfo';
 
 export default defineComponent({
   props: {
@@ -77,6 +87,12 @@ export default defineComponent({
         showList.value = false;
       }, 200);
     };
+    
+    const menuItems = [
+      { name: 'Home', link: '/' },
+      { name: 'Aboutus', link: '/about' },
+      { name: 'Contact', link: '/contact' }
+    ];
 
     return {
       searchQuery,
@@ -87,94 +103,8 @@ export default defineComponent({
       selectSuggestion,
       showSuggestions,
       hideSuggestions,
+      menuItems,
     };
   },
 });
 </script>
-
-<style scoped>
-.navigation {
-  background-color: #333;
-  padding: 10px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
-
-.navigation ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.navigation li {
-  margin-right: 15px;
-}
-
-.navigation a {
-  color: white;
-  text-decoration: none;
-}
-
-.navigation a:hover {
-  text-decoration: underline;
-}
-
-.search-container {
-  display: flex;
-  gap: 10px;
-  position: relative;
-  align-items: center;
-}
-
-.search-container input {
-  padding: 5px;
-  width: 200px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  flex: 1;
-}
-
-.search-container button {
-  padding: 5px 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.search-container button:hover {
-  background-color: #0056b3;
-}
-
-.suggestions {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 35px;
-  left: 0;
-  width: 100%;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  max-height: 150px;
-  overflow-y: auto;
-  z-index: 1001;
-  font-size: 12px;
-}
-
-.suggestions li {
-  padding: 8px;
-  cursor: pointer;
-}
-
-.suggestions li:hover {
-  background-color: #007bff;
-  color: white;
-}
-</style>

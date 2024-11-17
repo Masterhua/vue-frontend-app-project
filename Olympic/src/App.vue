@@ -16,7 +16,6 @@ export default defineComponent({
   components: { Navigation },
   data() {
     return {
-      // Navigation menu items
       menuItems: [
         { name: 'Home', link: '/' },
       ],

@@ -15,8 +15,6 @@ export interface CountryInfo {
     enLongDescription: string;
     flagUrl: string;
   }
-  
-  // Mock data for countries
   export const countries: CountryInfo[] = [
         {
             "noc": "USA",

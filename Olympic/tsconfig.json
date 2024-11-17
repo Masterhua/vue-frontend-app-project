@@ -1,26 +1,27 @@
 {
   "compilerOptions": {
-    "target": "esnext", 
+    "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "allowJs": true,
-    "jsx": "preserve", 
-    "strict": true, 
-    "baseUrl": "src", 
+    "jsx": "preserve",
+    "strict": true,
+    "baseUrl": "src",
     "paths": {
-      "@components/*": ["components/*"], 
-      "@/*": ["*"]
+      "@components/*": ["components/*"],
+      "@/*": ["*"],
+      "@/sportdb.json": ["sportdb.json"]
     },
     "types": [
-      "node", 
+      "node",
       "vue"
     ]
   },
   "include": [
-    "src/**/*.ts", 
-    "src/**/*.d.ts", 
-    "src/**/*.tsx", 
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
     "src/**/*.vue",
     "vite-env.d.ts"
   ]
