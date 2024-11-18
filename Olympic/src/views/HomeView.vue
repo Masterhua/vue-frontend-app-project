@@ -100,6 +100,8 @@ export default defineComponent({
 
     const menuItems = [
       { name: 'Home', link: '/' },
+      { name: 'About Us', link: '/about' },
+      { name: 'Contact', link: '/contact' },
     ];
 
     const validateInput = () => {
