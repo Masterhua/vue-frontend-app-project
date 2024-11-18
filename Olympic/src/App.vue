@@ -18,7 +18,7 @@ export default defineComponent({
     return {
       menuItems: [
        { name: 'Home', link: '/' },
-      { name: 'About Us', link: '/about' },
+      { name: 'About Us', link: '/team' },
       { name: 'Contact', link: '/contact' },
       ],
     };

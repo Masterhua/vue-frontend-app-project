@@ -2,10 +2,11 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '@/views/HomeView.vue';
 import CountryDetail from '../views/CountryDetail.vue';
 import SportDetail from '@/views/SportDetail.vue';
-import AboutView from '@/views/Aboutview.vue';
+import AboutView from '@/views/TeamMember.vue';
 import ContactView from '@/views/Contactview.vue';
 import NotFoundView from '@/views/NotFoundView.vue';
 import nProgress from 'nprogress'
+import TeamMember from '@/views/TeamMember.vue';
 
 const routes = [
   {
@@ -13,9 +14,9 @@ const routes = [
     name: 'home',
     component: HomeView,
   },
-  { path: '/about', 
-    name: 'about', 
-    component: AboutView,
+  { path: '/team', 
+    name: 'teammember', 
+    component: TeamMember,
   },
   { path: '/contact', 
     name: 'contact', 
