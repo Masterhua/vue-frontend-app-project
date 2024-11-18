@@ -58,50 +58,5 @@
       { "name": "Tennis", "gold": 1, "silver": 1, "bronze": 1 },
       { "name": "Volleyball", "gold": 1, "silver": 1, "bronze": 2 }
     ]
-  },
-  {
-    "noc": "FRA",
-    "disciplines": [
-      { "name": "Basketball", "gold": 2, "silver": 3, "bronze": 1 },
-      { "name": "Football", "gold": 1, "silver": 2, "bronze": 2 },
-      { "name": "Cycling", "gold": 4, "silver": 5, "bronze": 3 },
-      { "name": "Swimming", "gold": 3, "silver": 3, "bronze": 4 },
-      { "name": "Athletics", "gold": 2, "silver": 5, "bronze": 5 },
-      { "name": "Gymnastics", "gold": 2, "silver": 3, "bronze": 4 },
-      { "name": "Handball", "gold": 1, "silver": 1, "bronze": 1 },
-      { "name": "Judo", "gold": 1, "silver": 3, "bronze": 2 },
-      { "name": "Boxing", "gold": 2, "silver": 2, "bronze": 1 },
-      { "name": "Fencing", "gold": 2, "silver": 3, "bronze": 3 }
-    ]
-  },
-  {
-    "noc": "NED",
-    "disciplines": [
-      { "name": "Cycling", "gold": 6, "silver": 3, "bronze": 5 },
-      { "name": "Speed Skating", "gold": 7, "silver": 2, "bronze": 4 },
-      { "name": "Field Hockey", "gold": 4, "silver": 1, "bronze": 3 },
-      { "name": "Swimming", "gold": 2, "silver": 1, "bronze": 2 },
-      { "name": "Athletics", "gold": 2, "silver": 1, "bronze": 3 },
-      { "name": "Rowing", "gold": 1, "silver": 2, "bronze": 1 },
-      { "name": "Skateboarding", "gold": 1, "silver": 0, "bronze": 0 },
-      { "name": "Gymnastics", "gold": 1, "silver": 1, "bronze": 1 },
-      { "name": "Sailing", "gold": 1, "silver": 0, "bronze": 0 },
-      { "name": "Judo", "gold": 0, "silver": 0, "bronze": 1 }
-    ]
-  },
-  {
-    "noc": "GBR",
-    "disciplines": [
-      { "name": "Cycling", "gold": 7, "silver": 10, "bronze": 7 },
-      { "name": "Athletics", "gold": 5, "silver": 8, "bronze": 7 },
-      { "name": "Rowing", "gold": 2, "silver": 2, "bronze": 2 },
-      { "name": "Gymnastics", "gold": 0, "silver": 1, "bronze": 3 },
-      { "name": "Football", "gold": 0, "silver": 1, "bronze": 1 },
-      { "name": "Swimming", "gold": 1, "silver": 0, "bronze": 2 },
-      { "name": "Boxing", "gold": 1, "silver": 3, "bronze": 2 },
-      { "name": "Tennis", "gold": 0, "silver": 2, "bronze": 3 },
-      { "name": "Equestrian", "gold": 1, "silver": 0, "bronze": 1 },
-      { "name": "Hockey", "gold": 0, "silver": 0, "bronze": 3 }
-    ]
   }
 ]
