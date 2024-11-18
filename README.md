@@ -7,11 +7,12 @@
 
 ## 👥 Team Member
 
--   | Name              StudentId       |
--   |---------------|-------------------|
--   | LiaoZhenghua  | 20222092          |
--   | HeHaonan      | 20222094          |
--   | ChenHao       | 20222090          |
+| Name          | StudentId  |
+|---------------|------------|
+| LiaoZhenghua  | 20222092   |
+| HeHaonan      | 20222094   |
+| ChenHao       | 20222090   |
+
 
 ## 🚀vercel online access
 -   https://vue-frontend-app-project-sybp.vercel.app/
